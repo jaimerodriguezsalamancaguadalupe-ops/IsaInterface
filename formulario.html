@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="ejCamclimatico.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1>Formulario</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="formulario.html">Formulario</a></li>
+
+        </ul>
+    </nav>
+
+    <form action="recogerDatos.php" method="post">
+
+
+        <fieldset class="datosp">
+
+            <legend>Datos personales</legend>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="firstname" placeholder="Introduce tu nombre">
+
+            <br />
+            <br />
+
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="lastname" name="apellido" placeholder="Introduce tus apellidos">
+
+            <br />
+            <br />
+
+            <label for="edad">Edad</label>
+            <input type="number" id="age" name="edad" placeholder="Introduce tu edad">
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>¿Estás de acuerdo con el cambio climático?</legend>
+            <input type="radio" id="respuesta">
+            <label for="respuesta">Si</label>
+        </fieldset>
+        <br />
+
+        <fieldset>
+            <legend>¿Cuál de estas opciones es la correcta?</legend>
+            <input type="radio" id="first">
+            <label for="first">La temperatura media mundial en 2024 ha aumentado ya 1,55 ± 0,13 °C desde la época
+                preindustrial.</label>
+
+            <br />
+            <input type="radio">
+            <label for="second">Según el 50% de la ciudadanía piensa que España no hace lo suficiente para luchar
+                contra el cambio climático</label>
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+            <legend>Comentarios</legend>
+            <label for="otros">¿Qué consecuencias tiene el cambio climático</label>
+            <br>
+            <textarea id="comment"></textarea>
+        </fieldset>
+        <br />
+
+        <fieldset>
+            <legend>Nivel del formulario</legend>
+            <label for="level">Selecciona el nivel del formulario</label>
+            <select id="option">
+                <option value="1">Fácil</input>
+                <option value="2">Dificil</option>
+                <option value="3">Muy dificil</option>
+            </select>
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <input type="submit" value="Cancelar">
+    </form>
+
+    <footer class="pie">
+        <p>@ 2025 Formulario sobre el cambio climático</p>
+    </footer>
+</body>
+
+</html>

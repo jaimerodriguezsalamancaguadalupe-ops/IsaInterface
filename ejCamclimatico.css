@@ -1,0 +1,157 @@
+/* Ajustes generales */
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 1512px;
+  max-width: 1512px;
+  margin: auto;
+  background-color: #c7c2c2;
+}
+
+.intro {
+  text-align: justify;
+}
+
+/* Encabezado */
+header {
+  background: #2a6f97;
+  color: white;
+  text-align: center;
+  padding: 4px;
+  font-size: 1.5rem;
+
+}
+
+/* Navegación */
+nav {
+  background: #468faf;
+  text-align: center;
+  padding: 10px;
+}
+
+nav li {
+
+  display: inline-block;
+  /* Convierte los elementos en bloque en elementos en linea */
+  margin: 0 15px;
+}
+
+/* Estructura principal*/
+main {
+/* Se utiliza para convertir un contenedor en un conjunto de cajas (cuadricula). 
+  Si lo aplica,  permite organizarlos en filas y columnas a los elementos hijos (ejemplo:grid-template-columns) 
+  */
+  display: grid;
+  /*   */
+  /* Primera caja 200px fija, 
+  Segunda columna 1fr= espacio restante de 1512-200=1312px
+    */
+  grid-template-columns: 200px 1fr;
+
+  grid-template-areas:
+    /* Permite nombrar a cada área de las cajas y luego asignar a los elementos */
+    "sidebar intro"
+    "sidebar tablas"
+    "sidebar lista"
+    "sidebar imagenes";
+
+}
+
+/* Sidebar */
+.sidebar {
+  /* Indica en que area del diseño de la pagina debe colocarse un elemento */
+  grid-area: sidebar;
+  background: #d9d9d9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Introducción */
+.intro {
+  /* Indica en que area del diseño de la pagina debe colocarse un elemento */
+  grid-area: intro;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+
+/* Tablas */
+.tablas {
+
+
+  display: grid;
+  /* Se utiliza para convertir un contenedor en un conjunto de cajas (cuadricula). 
+  Si lo aplica,  permite organizarlos en filas y columnas a los elementos hijos (ejemplo:grid-template-columns) 
+  */
+  
+  /* Cada columna:
+   Ocupa la mitad del ancho disponible de la clase "tablas" 
+   Cada columna= (1312-20)/2=646px   */
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  
+}
+
+.tabla1,
+.tabla2 {
+  background: #d2cccc;
+  padding: 15px;
+  padding-right: 200px;
+  border-radius: 8px;
+  text-align: justify;
+}
+
+.tabla2 {
+  margin: 0 25px;
+  padding: 10px;
+}
+
+.tabla1 {
+  margin: 0 20px;
+  padding: 10px;
+}
+
+/* Lista */
+.lista {
+  background: #ffffff;
+  padding: 0 10px;
+  border-radius: 8px;
+}
+
+/* Imágenes */
+.imagenes {
+  /* Indica en que area del diseño de la pagina debe colocarse un elemento */
+  grid-area: imagenes;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+
+}
+
+.imagenes img {
+  width: 500px;
+  border-radius: 8px;
+}
+
+.img1 {
+  margin: 0 10px;
+  width: 450px;
+  padding-top: 10px;
+}
+
+.img2 {
+  width: 450px;
+  padding-top: 10px;
+}
+
+
+/* Footer */
+footer {
+  background: #2a6f97;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
